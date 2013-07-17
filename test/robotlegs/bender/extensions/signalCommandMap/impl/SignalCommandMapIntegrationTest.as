@@ -14,6 +14,7 @@ package robotlegs.bender.extensions.signalCommandMap.impl
 	import org.hamcrest.object.strictlyEqualTo;
 	import org.osflash.signals.Signal;
 	import org.swiftsuspenders.Injector;
+
 	import robotlegs.bender.extensions.signalCommandMap.api.ISignalCommandMap;
 	import robotlegs.bender.extensions.signalCommandMap.support.NullCommand;
 	import robotlegs.bender.extensions.signalCommandMap.support.Payload;
@@ -21,6 +22,7 @@ package robotlegs.bender.extensions.signalCommandMap.impl
 	import robotlegs.bender.extensions.signalCommandMap.support.SupportSignal;
 	import robotlegs.bender.extensions.signalCommandMap.support.SupportSignal2;
 	import robotlegs.bender.framework.api.IContext;
+	import robotlegs.bender.framework.api.IInjector;
 	import robotlegs.bender.framework.impl.Context;
 
 	/**
@@ -34,7 +36,7 @@ package robotlegs.bender.extensions.signalCommandMap.impl
 		/* Private Properties                                                         */
 		/*============================================================================*/
 
-		private var injector:Injector;
+		private var injector:IInjector;
 
 		private var signalCommandMap:ISignalCommandMap;
 
@@ -451,10 +453,12 @@ package robotlegs.bender.extensions.signalCommandMap.impl
 
 import org.osflash.signals.Signal;
 import org.swiftsuspenders.Injector;
+
 import robotlegs.bender.extensions.signalCommandMap.api.ISignalCommandMap;
 import robotlegs.bender.extensions.signalCommandMap.support.NullCommand;
 import robotlegs.bender.extensions.signalCommandMap.support.Payload;
 import robotlegs.bender.extensions.signalCommandMap.support.SupportSignal;
+import robotlegs.bender.framework.api.IInjector;
 
 internal class ExecuteMethodWithParametersCommand
 {
@@ -666,7 +670,7 @@ internal class CascadingCommand
 	/*============================================================================*/
 
 	[Inject]
-	public var injector:Injector;
+	public var injector:IInjector;
 
 	[Inject]
 	public var signalCommandMap:ISignalCommandMap;
