@@ -54,10 +54,9 @@
 			  failonerror = "true">
 			<!-- Build our SWC with a versioned name. -->
 			<arg value = "-output=${bin.loc}/${project.name.versioned}.swc" />
+			<arg value = "-external-library-path+=${lib.loc}" />
 			<!-- We want all the signal command map package classes in the SWC being built. -->
 			<arg value = "-include-sources+=${main.src.loc}/robotlegs" />
-			<!-- Include classes from SWCs in this folder, but only the ones we use. -->
-			<arg value = "-library-path+=${lib.loc}" />
 			<!-- Keep the magic alive. -->
 			<arg value = "-keep-as3-metadata+=Inject" />
 			<arg value = "-keep-as3-metadata+=PostConstruct" />
