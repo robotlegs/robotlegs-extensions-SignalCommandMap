@@ -1,2 +1,13 @@
 # Signal command map for Robotlegs2
 
+## Mapping a command
+
+```as3
+signalCommandMap.map(FooSignal).toCommand(FooCommand);
+```
+
+## Unmapping a command
+
+```as3
+signalCommandMap.unmap(FooSignal).fromCommand(FooCommand);
+```
